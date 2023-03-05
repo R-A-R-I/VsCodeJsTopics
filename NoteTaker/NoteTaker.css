@@ -1,0 +1,141 @@
+#wrapInputEllie {
+  margin: auto;
+  width: 95%;
+}
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(93, 182, 93);
+  padding: 10px;
+}
+label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+input {
+  border: 1px solid #dbdbdb;
+}
+#noteI {
+  width: 80%;
+  height: 40px;
+}
+#AddNotebtn {
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 3px;
+  width: 80px;
+  height: 30px;
+}
+
+#optionsModal {
+  z-index: 10;
+  display: none;
+}
+#viewDetailBtnBox {
+  margin-bottom: 10px;
+  bottom: 0;
+}
+#viewDetailBtn {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  color: white;
+  background-color: #1f60d8;
+  border-radius: 3px;
+  border: none;
+  height: 25px;
+}
+#outSide_modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+}
+#detailModal {
+  position: fixed;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  min-height: 150px;
+  background-color: #fefefe;
+  right: 0;
+  top: 40%;
+}
+#detailModalHeader {
+  text-align: right;
+}
+#detailModalContent {
+  margin-left: 10px;
+  /*font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  /*;*/
+}
+.leaveModalBtnBox {
+  margin-right: 10px;
+  height: 5mm;
+  width: 5mm;
+}
+#leaveModalBtn {
+  border: none;
+  background: white;
+}
+#sectionContainer {
+  /*text-align: center;*/
+  /*align-items: center;*/
+  margin: auto; /*this centre the div element by default*/
+  display: flex;
+  justify-content: space-between; /*have to be used with flex box*/
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+section {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 45%;
+  height: 35mm;
+  /*display: inline-block; */ /*for position elements side by side*/
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  flex: 1 0 45%; /* setting the flex basis value to 45%, you limit the row to 2 elements
+  /*padding: 10px 10px 10px 10px;*/
+}
+#contentWrapper p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 13px;
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden; /*This hides the extra(overflowed) text*/
+  text-overflow: ellipsis; /* this adds the (...) to show that the text is cut off*/
+}
+#optionBtn {
+  border: none;
+  outline: none;
+  background: none;
+  position: right;
+}
+/*#optionBtn{
+
+}*/
+img {
+  width: 20px;
+  height: 20px;
+}
+
+#noteBody {
+  padding: 10px;
+}
+
+#noteNum {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}

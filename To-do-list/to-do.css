@@ -1,0 +1,13 @@
+#filletrectoutline {
+  padding: 10px;
+  border-style: solid;
+  border-color: aquamarine;
+  border-radius: 20px;
+}
+h1 {
+  height: 2px;
+}
+img {
+  width: 15px;
+  height: 15px;
+}

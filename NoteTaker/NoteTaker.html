@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteTaker</title>
+    <link rel="stylesheet" href="NoteTaker.css">
+</head>
+<body>
+    
+    <div align="center" id="wrapInputEllie">
+    <h1>Note Taker</h1>
+    <h3>Add a new note:</h3>    
+    <form>
+        <label>Note:</label>
+        <input id="noteI" type="text" placeholder="Write your note here">
+    </form>
+    
+    <br/>
+    <div align="center" id="btnbox">
+        <button id="AddNotebtn">Add Note</button>
+    </div>
+    <br/>
+    <div align="left">
+    <p id="fillerStatement">No notes added yet!</p>    
+    </div>
+    </div>
+    <!--You could make the structure for elements and only enable them with logic as seen below-->
+    <!--This is another strategy for creating elements instead of in js -->
+    <!--CSS does a similar thing where you define characteristics for elements before they are create and will get pegged to element once 
+    created-->
+    <div  id="sectionContainer">
+        
+    </div>
+    <div id="optionsModal">
+        <button id="deleteNotesBtn">Delete</button>
+    </div>
+    <div align="center" id="outSide_modal"></div>
+
+    <div id="detailModal">
+        <div id="detailModalHeader">
+        <span class="leaveModalBtnBox"><button id="leaveModalBtn">&times<!--One of many html entities--></button></span><!--You cannot use align for span it is deprecated-->
+        </div>
+
+        <div id="detailModalBody">
+            <p id="detailModalContent"></p>
+        </div>
+    </div>
+
+</body>
+<script src="NoteTaker.js"></script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="ExpenseTracker.css">
+</head>
+<body>
+    <h1 align="center">Expense Tracker</h1>
+    <h3 align="center">Add a new item</h3>
+    <div class="box">
+    <form class="TopForm">
+            <label>Name:</label>
+            <input id= "ExpenseInputField" type="text" placeholder="What is the expense">
+            
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="box2">
+      <form class="BottomForms">
+        <label>Date:</label>
+        <input id= "DateInputField" type="date" placeholder="mm/dd/yyyy">
+        <!--<div class="amountContainer">-->
+         <label>Amount:</label>
+        <input id= "AmountInputField" type="number" placeholder="$######">   
+        <!--</div>-->
+         <!--type="money"-->
+    </form>  
+    </div>
+    
+    
+    
+        <br>
+        <br>
+        <div align="center">
+        <button  id="AddExpenseButton" >Add Expense</button> <!--Cannot align button--> 
+        </div>
+        
+        <br>
+        <br>
+    <Table align="left" id="ExpenseTable" class="byDefault">
+        <tr>
+            <th id="FirstHeadingColumn" width="300px" class="byDefault" class="c1">Name</th>
+            <th width="130px" class="byDefault" class="c2">Date</th>
+            <th width="170px" class="byDefault" class="c3">Amount</th>
+            <th width="100" class="byDefault" class="c4"></th>
+            <!--class="colName"-->
+            <!--class="colDate"-->
+            <!--class="colAmount-->
+        </tr>
+        <div id="ExpenseContainer">
+          <tr id="Outputln">
+                <td id="placeHolderNameCell" width="300px" class="byDefault" class="c1"> No expenses added!</td>
+                <td id="placeHolderDateCell" width="130px" class="byDefault" class="c2"></td>
+                <td id="placeHolderAmountCell" width="170px" class="byDefault" class="c3"></td>
+                <td id="placeHolderRemoveCell" width="100px" class="byDefault" class="c4"></td>
+        </tr>  
+        </div>
+        
+    </Table>
+
+</body>
+<script src="ExpenseTracker.js"></script>
+</html>

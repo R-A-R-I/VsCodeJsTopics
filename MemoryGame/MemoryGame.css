@@ -1,0 +1,138 @@
+/*.card {
+  position: relative;
+  background-color: green; /*applies to padding and border*/
+/*color: green;*/
+/* width: 170px;
+  height: 170px;
+  border: none;
+  padding: 5px; /**/ /* applies to all four sides. If you place more than one values then it starts to account for other sides. Its good practise that I applied the padding here. It helps with the grid-grap*/
+/*box-sizing: border-box;
+}*/
+
+.card {
+  position: relative;
+  border: none;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 170px;
+  height: 170px;
+}
+
+.holdCard {
+  padding-right: 5px;
+  /*background-color: green;*/
+  /*font-size: 100px;
+  text-align: center;*/
+} /**/
+
+#embodySections {
+  width: 550px;
+  height: 550px;
+  display: grid;
+  grid-template-columns: /*1fr 1fr 1fr;*/ /*repeat(3, 1fr)*/ repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /*grid-gap: 1em;*/
+  /*position: absolute; */
+  /*background-color: aquamarine;*/
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.innerCard {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s; /*The duration slows down the animation, no duration means the animation occurs instantly that your eye cannot even pick it up */
+  position: relative; /* this allows the child with absolute position to be placed relative to its parent, ie this element*/
+  transform-style: preserve-3d; /*  Without this property the changing of elements(sides) wouldn't be possible*/
+  cursor: pointer; /* this changes the cursor to one that seems clickable*/
+  z-index: 1;
+  border-radius: 3px;
+}
+/*.innerCard*/
+.isflipped {
+  /* it doesn't matter if you include the .innerCard*/
+  transform: perspective(500px) rotateX(180deg); /* if you leave a space between the value and its unit you will have a problem*/
+} /*You created a different CSS style for this than innerCard because you want an action to take place of an event has took place*/
+.frontSide {
+  width: 100%;
+  height: 100%;
+  color: white;
+  /*background-color: salmon; */
+  position: absolute; /*this remove the element from the normal flow of elements. Its not necessary to put this property value on this side of the card*/
+  top: 0;
+  pointer-events: none;
+  border-radius: 3px;
+}
+
+.frontSide::before {
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(25px);
+  transform: translateY(29px) scale(0.9);
+} /**/
+
+.frontSide:nth-child(1),
+.frontSide:nth-child(1)::before {
+  background: linear-gradient(135deg, #24ff72, #2196f3);
+} /**/
+
+.backSide {
+  /*border: 1px solid;
+  border-radius: 3px;*/
+  color: white;
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  transform: perspective(500px) rotateX(180deg); /**/
+  /*image: url("https://cdn.pixabay.com/photo/2019/07/02/09/32/tesla-4311967_1280.jpg");*/
+  pointer-events: none;
+  border-radius: 3px;
+}
+/*TAKE NOTES ITS VERY IMPORTANT FOR FUTURE REFERENCE*/
+img {
+  /*position: absolute;*/
+  width: 100%; /**/
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: 3px;
+}
+#img1 {
+  /*background-image: url(img/Mustang-Mach-1_memgame.png);
+  display: block;*/
+  /*object-fit: contain; */
+
+  /*top: 50%;
+  right: 50%;*/
+
+  /*width: 160px;
+  height: 160px;
+  background-size: 100%;*/ /**/
+} /**/
+
+.frontSide p {
+  font-size: 50px;
+  font-family: "Rubik", sans-serif;
+}
+
+#scoreText {
+  font-family: "Arimo", sans-serif;
+}
+
+#passedAttempts {
+  font-family: "Arimo", sans-serif;
+}
+
+button {
+  border: none;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background: rgb(4, 79, 192);
+  border-radius: 3px;
+  color: white;
+}
